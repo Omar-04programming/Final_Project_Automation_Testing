@@ -1,0 +1,58 @@
+{
+  "baseUrls": {
+    "BASE_URL": "https://www.saucedemo.com/",
+    "LOGIN_URL": "https://www.saucedemo.com/login.html",
+    "HOME_URL": "https://www.saucedemo.com/inventory.html",
+    "CART_URL": "https://www.saucedemo.com/cart.html",
+    "CHECKOUT_STEP_ONE_URL": "https://www.saucedemo.com/checkout-step-one.html",
+    "CHECKOUT_STEP_TWO_URL": "https://www.saucedemo.com/checkout-step-two.html",
+    "CHECKOUT_COMPLETE_URL": "https://www.saucedemo.com/checkout-complete.html"
+  },
+  "credentials": {
+    "PASSWORD": "secret_sauce",
+    "USERNAMES": [
+      "standard_user",
+      "locked_out_user",
+      "problem_user",
+      "performance_glitch_user",
+      "error_user",
+      "visual_user"
+    ]
+  },
+  "products": [
+    "Sauce Labs Backpack",
+    "Sauce Labs Bolt T-Shirt",
+    "Sauce Labs Bike Light",
+    "Sauce Labs Fleece Jacket",
+    "Sauce Labs Onesie",
+    "Test.allTheThings() T-Shirt (Red)"
+  ],
+  "cartData": {
+    "QUANTITY": "1"
+  },
+  "checkoutData": {
+    "FIRST_NAME": "Kylian",
+    "LAST_NAME": "Mbappé",
+    "POSTAL_CODE": "12345"
+  },
+  "expectedMessages": {
+    "COMPLETE_HEADER_MESSAGE": "Thank you for your order!",
+    "COMPLETE_TEXT_MESSAGE": "Your order has been dispatched, and will arrive just as fast as the pony can get there!"
+  },
+  "expectedTitles": {
+    "HOME_PAGE_TITLE": "Products",
+    "CART_PAGE_TITLE": "Your Cart",
+    "CHECKOUT_PAGE_TITLE": "Checkout: Your Information",
+    "OVERVIEW_PAGE_TITLE": "Checkout: Overview",
+    "COMPLETE_PAGE_TITLE": "Checkout: Complete!"
+  },
+  "expectedErrors": {
+    "ERROR_LOGIN_MESSAGE": "Epic sadface: Username and password do not match any user in this service",
+    "ERROR_FIRST_NAME_REQUIRED": "Error: First Name is required",
+    "ERROR_LAST_NAME_REQUIRED": "Error: Last Name is required",
+    "ERROR_POSTAL_CODE_REQUIRED": "Error: Postal Code is required"
+  },
+  "driverConfig": {
+    "BROWSER": "edge"
+  }
+}

@@ -1,0 +1,12 @@
+<suite name="SwagLabs EndToEnd Suite" verbose="1" parallel="false">
+    <test name="EndToEnd Flow">
+        <classes>
+            <class name="com.swagLabs.tests.LoginTest"/>
+            <class name="com.swagLabs.tests.HomePageTest"/>
+            <class name="com.swagLabs.tests.CartPageTest"/>
+            <class name="com.swagLabs.tests.CheckoutPageTest"/>
+            <class name="com.swagLabs.tests.OverviewPageTest"/>
+            <class name="com.swagLabs.tests.CompletePageTest"/>
+        </classes>
+    </test>
+</suite>

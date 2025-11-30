@@ -24,8 +24,9 @@ public class LoginPage {
     }
 
     //  Navigate to the login page
-    public void navigateToLoginPage(String loginPageURL){
+    public LoginPage navigateToLoginPage(String loginPageURL){
         BrowserActions.navigateToURL(driver,loginPageURL);
+        return this;
     }
 
 

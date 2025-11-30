@@ -1,6 +1,5 @@
 package com.swagLabs.pages;
 
-import com.swagLabs.data.WebsiteData;
 import com.swagLabs.utils.BrowserActions;
 import com.swagLabs.utils.CustomSoftAssertion;
 import com.swagLabs.utils.Validations;

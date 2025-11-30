@@ -71,4 +71,11 @@ public class HomePage {
         return this;
     }
 
+    public HomePage logout() {
+        Waits.waitForElementToBeClickable(driver,By.id("react-burger-menu-btn"));
+        ElementActions.clickElement(driver,By.id("react-burger-menu-btn"));
+        Waits.waitForElementToBeClickable(driver,By.id("logout_sidebar_link"));
+        ElementActions.clickElement(driver,By.id("logout_sidebar_link"));
+        return this;
+    }
 }

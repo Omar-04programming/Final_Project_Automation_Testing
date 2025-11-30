@@ -1,0 +1,38 @@
+[DEBUG] - [30-11-2025 08:04:33] [main] [org.testng.TestNG] - suiteXmlPath: "D:\Self Study\DEPI\Automation\Test_Automation\src\test\resources\testing.xml"
+[WARN] - [30-11-2025 08:04:33] [main] [org.testng.xml.TestNGContentHandler] - It is strongly recommended to add "<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.1.dtd" >" at the top of the suite file [D:\Self Study\DEPI\Automation\Test_Automation\src\test\resources\testing.xml] otherwise TestNG may fail or not work as expected.
+[INFO] - [30-11-2025 08:04:33] [main] [org.testng.internal.Utils] - [XmlSuite] [WARN] 'parallel' value 'false' is no longer valid, defaulting to 'none'.
+[INFO] - [30-11-2025 08:04:33] [main] [org.testng.internal.Utils] - [TestNG] Running:
+  D:\Self Study\DEPI\Automation\Test_Automation\src\test\resources\testing.xml
+
+[DEBUG] - [30-11-2025 08:04:33] [main] [com.jayway.jsonpath.internal.path.CompiledPath] - Evaluating path: $['driverConfig']['BROWSER']
+[DEBUG] - [30-11-2025 08:04:35] [main] [com.jayway.jsonpath.internal.path.CompiledPath] - Evaluating path: $['baseUrls']['BASE_URL']
+[DEBUG] - [30-11-2025 08:04:36] [main] [com.jayway.jsonpath.internal.path.CompiledPath] - Evaluating path: $['credentials']['USERNAMES'][0]
+[DEBUG] - [30-11-2025 08:04:36] [main] [com.jayway.jsonpath.internal.path.CompiledPath] - Evaluating path: $['credentials']['PASSWORD']
+[DEBUG] - [30-11-2025 08:04:37] [main] [com.jayway.jsonpath.internal.path.CompiledPath] - Evaluating path: $['expectedTitles']['HOME_PAGE_TITLE']
+[DEBUG] - [30-11-2025 08:04:37] [main] [com.jayway.jsonpath.internal.path.CompiledPath] - Evaluating path: $['baseUrls']['HOME_URL']
+[DEBUG] - [30-11-2025 08:04:37] [main] [com.jayway.jsonpath.internal.path.CompiledPath] - Evaluating path: $['baseUrls']['HOME_URL']
+[DEBUG] - [30-11-2025 08:04:37] [main] [com.jayway.jsonpath.internal.path.CompiledPath] - Evaluating path: $['products'][0]
+[DEBUG] - [30-11-2025 08:04:37] [main] [com.jayway.jsonpath.internal.path.CompiledPath] - Evaluating path: $['products'][0]
+[DEBUG] - [30-11-2025 08:04:37] [main] [com.jayway.jsonpath.internal.path.CompiledPath] - Evaluating path: $['products'][0]
+[DEBUG] - [30-11-2025 08:04:37] [main] [com.jayway.jsonpath.internal.path.CompiledPath] - Evaluating path: $['cartData']['QUANTITY']
+[DEBUG] - [30-11-2025 08:04:37] [main] [com.jayway.jsonpath.internal.path.CompiledPath] - Evaluating path: $['baseUrls']['CART_URL']
+[DEBUG] - [30-11-2025 08:04:37] [main] [com.jayway.jsonpath.internal.path.CompiledPath] - Evaluating path: $['expectedTitles']['CART_PAGE_TITLE']
+[DEBUG] - [30-11-2025 08:04:38] [main] [com.jayway.jsonpath.internal.path.CompiledPath] - Evaluating path: $['baseUrls']['CHECKOUT_STEP_ONE_URL']
+[DEBUG] - [30-11-2025 08:04:38] [main] [com.jayway.jsonpath.internal.path.CompiledPath] - Evaluating path: $['baseUrls']['CHECKOUT_STEP_ONE_URL']
+[DEBUG] - [30-11-2025 08:04:38] [main] [com.jayway.jsonpath.internal.path.CompiledPath] - Evaluating path: $['baseUrls']['CHECKOUT_STEP_ONE_URL']
+[DEBUG] - [30-11-2025 08:04:38] [main] [com.jayway.jsonpath.internal.path.CompiledPath] - Evaluating path: $['expectedTitles']['CHECKOUT_PAGE_TITLE']
+[DEBUG] - [30-11-2025 08:04:38] [main] [com.jayway.jsonpath.internal.path.CompiledPath] - Evaluating path: $['checkoutData']['FIRST_NAME']
+[DEBUG] - [30-11-2025 08:04:38] [main] [com.jayway.jsonpath.internal.path.CompiledPath] - Evaluating path: $['checkoutData']['LAST_NAME']
+[DEBUG] - [30-11-2025 08:04:38] [main] [com.jayway.jsonpath.internal.path.CompiledPath] - Evaluating path: $['checkoutData']['POSTAL_CODE']
+[DEBUG] - [30-11-2025 08:04:38] [main] [com.jayway.jsonpath.internal.path.CompiledPath] - Evaluating path: $['baseUrls']['CHECKOUT_STEP_TWO_URL']
+[DEBUG] - [30-11-2025 08:04:38] [main] [com.jayway.jsonpath.internal.path.CompiledPath] - Evaluating path: $['baseUrls']['CHECKOUT_STEP_TWO_URL']
+[DEBUG] - [30-11-2025 08:04:38] [main] [com.jayway.jsonpath.internal.path.CompiledPath] - Evaluating path: $['baseUrls']['CHECKOUT_STEP_TWO_URL']
+[DEBUG] - [30-11-2025 08:04:38] [main] [com.jayway.jsonpath.internal.path.CompiledPath] - Evaluating path: $['expectedTitles']['OVERVIEW_PAGE_TITLE']
+[DEBUG] - [30-11-2025 08:04:38] [main] [com.jayway.jsonpath.internal.path.CompiledPath] - Evaluating path: $['baseUrls']['CHECKOUT_COMPLETE_URL']
+[DEBUG] - [30-11-2025 08:04:38] [main] [com.jayway.jsonpath.internal.path.CompiledPath] - Evaluating path: $['baseUrls']['CHECKOUT_COMPLETE_URL']
+[DEBUG] - [30-11-2025 08:04:38] [main] [com.jayway.jsonpath.internal.path.CompiledPath] - Evaluating path: $['baseUrls']['CHECKOUT_COMPLETE_URL']
+[DEBUG] - [30-11-2025 08:04:38] [main] [com.jayway.jsonpath.internal.path.CompiledPath] - Evaluating path: $['expectedTitles']['COMPLETE_PAGE_TITLE']
+[DEBUG] - [30-11-2025 08:04:39] [main] [com.jayway.jsonpath.internal.path.CompiledPath] - Evaluating path: $['expectedMessages']['COMPLETE_HEADER_MESSAGE']
+[DEBUG] - [30-11-2025 08:04:39] [main] [com.jayway.jsonpath.internal.path.CompiledPath] - Evaluating path: $['expectedMessages']['COMPLETE_TEXT_MESSAGE']
+[DEBUG] - [30-11-2025 08:04:39] [main] [com.jayway.jsonpath.internal.path.CompiledPath] - Evaluating path: $['baseUrls']['HOME_URL']
+[DEBUG] - [30-11-2025 08:04:39] [main] [com.jayway.jsonpath.internal.path.CompiledPath] - Evaluating path: $['baseUrls']['HOME_URL']
