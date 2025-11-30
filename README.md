@@ -1,5 +1,4 @@
 🧪 Automation Testing Project
-
 🔍 Overview
 This project is an automated testing framework designed to validate "Swag Labs" using
 Selenium WebDriver with Java. It follows the Page Object Model (POM) design pattern for better
@@ -7,7 +6,6 @@ maintainability and scalability.
 
 
 ✨ Key Features
-
 - Page Object Model: clean separation between test logic and page-specific code
 - Cross-Browser Testing: supports Chrome and Edge
 - TestNG Integration: for test execution and reporting
@@ -16,7 +14,6 @@ maintainability and scalability.
 - JSON Data Handling: dynamic test data loading via JavaUtils
 
 🛠 Technologies Used
-
 - Java 8+
 - Selenium WebDriver
 - TestNG
@@ -29,16 +26,27 @@ maintainability and scalability.
 Automation-Testing-Project/
 
 ├── pom.xml
+
 ├── README.md
+
 ├── src/
+
 │   ├── main/java/
-│   │   └── pages/         # Page classes (LoginPage, HomePage, etc.)
-│   │   └── utils/         # Utility classes (BrowserActions, Validations, etc.)
+
+│   │   └── pages/ 
+ # Page classes (LoginPage, HomePage, etc.)
+│   │   └── utils/ 
+# Utility classes (BrowserActions, Validations, etc.)
 │   ├── test/java/
-│   │   └── tests/         # Test classes (LoginTest, CheckoutPageTest, etc.)
+
+│   │   └── tests/  
+# Test classes (LoginTest, CheckoutPageTest, etc.)
 │   ├── test/resources/
-│   │   └── testdata/      # JSON test data files
-│   │   └── config.properties # Configuration
+
+│   │   └── testdata/  
+# JSON test data files
+│   │   └── config.properties
+# Configuration
 └── testng.xml             # TestNG suite file
 
 
