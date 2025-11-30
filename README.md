@@ -26,20 +26,14 @@ maintainability and scalability.
 Automation-Testing-Project/
 
 ├── pom.xml
-
 ├── README.md
-
 ├── src/
-
 │   ├── main/java/
-
 │   │   └── pages/  # Page classes (LoginPage, HomePage, etc.)
 │   │   └── utils/ # Utility classes (BrowserActions, Validations, etc.)
 │   ├── test/java/
-
 │   │   └── tests/  # Test classes (LoginTest, CheckoutPageTest, etc.)
 │   ├── test/resources/
-
 │   │   └── testdata/  # JSON test data files
 │   │   └── config.properties# Configuration
 └── testng.xml             # TestNG suite file
