@@ -1,0 +1,195 @@
+@startuml
+package "com.swagLabs.tests" {
+  class BaseTest {
+    - json : JsonUtils
+    + setUpSuite() : void
+    + tearDownSuite() : void
+  }
+
+  class LoginTest {
+    + loginWithValidCredentials() : void
+    + loginWithInvalidCredentials() : void
+  }
+
+  class HomePageTest {
+    + addSpecificProductAndVerifyButtonChanged() : void
+  }
+
+  class CartPageTest {
+    + navigateFromCartToCheckoutPage() : void
+  }
+
+  class CheckoutPageTest {
+    + successfulCheckout() : void
+    + unsuccessfulCheckout() : void
+  }
+
+  class OverviewPageTest {
+    + checkOverviewPageIsDisplayTrueData() : void
+  }
+
+  class CompletePageTest {
+    + checkoutCompletePageDisplayCorrectMessage() : void
+  }
+}
+
+package "com.swagLabs.pages" {
+  class LoginPage {
+    - driver : WebDriver
+    - username : By
+    - password : By
+    - loginButton : By
+    - errorMessage : By
+    + navigateToLoginPage(url : String) : LoginPage
+    + enterUsername(username : String) : LoginPage
+    + enterPassword(password : String) : LoginPage
+    + clickLoginButton() : LoginPage
+    + getErrorMessage() : String
+    + assertSuccessfulLogin(url : String) : LoginPage
+    + assertUnsuccessfulLogin(errorMsg : String) : LoginPage
+  }
+
+  class HomePage {
+    - driver : WebDriver
+    + navigateToHomePage(url : String) : HomePage
+    + addProductToCart(productName : String) : HomePage
+    + openCartAndValidateProduct(productName : String, count : int) : CartPage
+    + assertButtonChangedToRemove(productName : String) : HomePage
+    + logout() : HomePage
+  }
+
+  class CartPage {
+    - driver : WebDriver
+    - checkout_button : By
+    + navigateToCartPage(url : String) : CartPage
+    + clickCheckoutButton() : CartPage
+    + assertSuccessfulPageTitle(title : String) : CartPage
+    + assertCheckoutPage(url : String) : CartPage
+    + assertSuccessfulCheckoutPage(url : String) : CartPage
+  }
+
+  class CheckoutPage {
+    - driver : WebDriver
+    - first_name : By
+    - last_name : By
+    - zip_code : By
+    - continue_button : By
+    - errorMessage : By
+    + navigateToCheckoutPage(url : String) : CheckoutPage
+    + enterCheckoutData(firstName : String, lastName : String, postalCode : String) : CheckoutPage
+    + assertSuccessfulPageTitle(title : String) : CheckoutPage
+    + getErrorMessage() : String
+    + assertOverviewPage(url : String) : CheckoutPage
+    + assertSuccessfulCheckout(url : String) : CheckoutPage
+    + assertUnSuccessfulCheckout(msg : String) : CheckoutPage
+  }
+
+  class OverviewPage {
+    - driver : WebDriver
+    - itemTotalLabel : By
+    - taxLabel : By
+    - totalLabel : By
+    - finishButton : By
+    + navigateToOverviewPage(url : String) : OverviewPage
+    + extractAmount(locator : By) : double
+    + assertSuccessfulPageTitle(title : String) : OverviewPage
+    + assertTotalCalculationIsCorrectAndFinishIfValid() : OverviewPage
+    + assertCheckoutComplete(url : String) : OverviewPage
+    + assertSuccessfulCheckoutComplete(url : String) : OverviewPage
+  }
+
+  class CompletePage {
+    - driver : WebDriver
+    - completeHeader : By
+    - completeText : By
+    - backToHomeButton : By
+    + navigateToCheckoutCompletePage(url : String) : CompletePage
+    + extractMessage(locator : By) : String
+    + assertSuccessfulPageTitle(title : String) : CompletePage
+    + assertDisplayCompleteMessageCorrect(header : String, text : String) : CompletePage
+    + assertBackToHome(url : String) : CompletePage
+    + assertSuccessfulBackToHome(url : String) : CompletePage
+  }
+}
+
+package "com.swagLabs.utils" {
+  class BrowserActions {
+    + navigateToURL(driver : WebDriver, url : String) : void
+    + getCurrentURL(driver : WebDriver) : String
+    + getPageTitle(driver : WebDriver) : String
+  }
+
+  class ElementActions {
+    + clickElement(driver : WebDriver, locator : By) : void
+    + sendData(driver : WebDriver, locator : By, text : String) : void
+    + getText(driver : WebDriver, locator : By) : String
+  }
+
+  class Waits {
+    + waitForElementToBeClickable(driver : WebDriver, locator : By) : void
+    + waitForElementToBeVisible(driver : WebDriver, locator : By) : void
+  }
+
+  class JsonUtils {
+    + getJsonData(path : String) : String
+    - loadFile(fileName : String) : JSONObject
+  }
+
+  class Validations {
+    + validatePageTitle(driver : WebDriver, expected : String) : void
+    + validatePageUrl(driver : WebDriver, expected : String) : void
+    + validateEquals(actual : Object, expected : Object, msg : String) : void
+    + validateTrue(condition : boolean, msg : String) : void
+  }
+
+  class CustomSoftAssertion {
+    + softAssertion : Object
+  }
+}
+
+package "com.swagLabs.drivers" {
+  class DriverManager {
+    - driver : WebDriver
+    + createInstance(browser : String) : void
+    + getDriver() : WebDriver
+  }
+}
+
+' العلاقات بين الـ Tests والـ Pages
+LoginTest --> LoginPage
+HomePageTest --> HomePage
+CartPageTest --> CartPage
+CheckoutPageTest --> CheckoutPage
+OverviewPageTest --> OverviewPage
+CompletePageTest --> CompletePage
+
+' الوراثة من BaseTest
+LoginTest --|> BaseTest
+HomePageTest --|> BaseTest
+CartPageTest --|> BaseTest
+CheckoutPageTest --|> BaseTest
+OverviewPageTest --|> BaseTest
+CompletePageTest --|> BaseTest
+
+' العلاقات بين الـ Pages والـ Utils/Drivers
+LoginPage --> BrowserActions
+LoginPage --> ElementActions
+LoginPage --> DriverManager
+HomePage --> ElementActions
+HomePage --> Waits
+HomePage --> DriverManager
+CartPage --> ElementActions
+CartPage --> Waits
+CartPage --> DriverManager
+CheckoutPage --> ElementActions
+CheckoutPage --> Waits
+CheckoutPage --> JsonUtils
+CheckoutPage --> DriverManager
+OverviewPage --> Validations
+OverviewPage --> DriverManager
+CompletePage --> Validations
+CompletePage --> DriverManager
+
+BaseTest --> JsonUtils
+BaseTest --> DriverManager
+@enduml
